@@ -135,7 +135,7 @@ const CreatePoint = () => {
     const uf = selectedUf;
     const city = selectedCity;
     const [latitude, longitude] = selectedPosition;
-    const items = selectedItems;
+    const itemsSelect = selectedItems;
 
     const data = new FormData();
 
@@ -146,7 +146,7 @@ const CreatePoint = () => {
     data.append('city', city);
     data.append('latitude', String(latitude));
     data.append('longitude', String(longitude));
-    data.append('items', items.join(','));
+    data.append('items', itemsSelect.join(','));
 
     if (selectedFile) {
       data.append('image', selectedFile);
